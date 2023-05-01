@@ -1,0 +1,11 @@
+{
+  "name": "swimfit",
+  "version": "1.0.0",
+  "description": "webapp that tracks swimming information i.e purpose, stroke, duration, distance, average speed per lap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chantelle Guevara",
+  "license": "ISC"
+}
