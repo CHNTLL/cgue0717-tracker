@@ -2,13 +2,20 @@
   "name": "swimfit",
   "version": "1.0.0",
   "description": "webapp that tracks swimming information i.e purpose, stroke, duration, distance, average speed per lap",
-  "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "prestart": "parcel build ./public/index.html",
+    "dev": "parcel serve ./public/index.html"
+    
   },
   "author": "Chantelle Guevara",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "sass": "^1.62.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3"
   }
 }

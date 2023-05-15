@@ -1,0 +1,260 @@
+
+//font styles
+h1,h2{
+    font-family: questrial,'Helvetica Neue', Arial;
+    color: #0B0E1F;
+}
+
+//placeholder
+
+body{
+    background-color:#F5F7FA ;
+    nav{
+   
+        margin:2em;
+        margin-bottom: 0em;
+    }
+}
+
+
+
+#header{
+    background-color: white;
+    padding: 20px;
+    border-radius: 25px;
+    margin: 2em;
+    margin-top:0em;
+}
+
+//add new session
+
+#popup-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F5F5;
+  }
+  
+  #popup {
+    width: 45em;
+    height: 85%;
+    background-color: #F5F5F5;
+    padding: 2em;
+
+    h1{
+        margin: 0px 0px 28px 0px;
+        font-size: 36px;
+    }
+  }
+
+  
+
+//form css
+#form{
+    display: block;
+    justify-content: center;
+}
+
+label{
+    font-size: 24px;
+    font-family: questrial,'Helvetica Neue', Arial;
+    color: #0B0E1F;
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=number]{
+    width: 100%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+::placeholder{
+    color: #737492;
+    font-family:'helvetica';
+    font-size: 15px;
+}
+
+select{
+    width: 100%;
+    height: 45px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    border-radius: 7px;
+    border-width: 1.5px;
+    border-color: #E2E2E2;    
+    font-size: 15px;
+    padding: 8px 10px;
+    color:#737492;
+    cursor: pointer;
+
+    /*replace default styling arrow*/
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="50"><polygon points= "0,0 100,0 50,50" style="fill:%23737492;"/></svg>');
+    background-position: right 10px top 50%;
+    background-repeat: no-repeat;
+    background-size: 10px;
+
+    /*above code entirely credited to https://youtu.be/8cExRlT--Zc */
+}
+
+
+
+select:hover{
+ outline: none;
+ border:  solid #63C0F9;
+}
+
+select:focus{
+    outline: none;
+    border: solid #63C0F9;
+    box-shadow: 0 0 1px 1px #63C0F9;
+}
+
+select option{
+    background: #ffffff;
+}
+
+
+  
+fieldset{
+  border: 0px;
+  padding: 0px;
+  margin-top: 14px;
+  margin-bottom: 44px;
+}
+
+img{
+    width: 90px;
+    height: 90px;
+}
+
+.labelexpanded{
+    font-size: 15px;
+    color: #737492;
+    display: flex;
+    float: left;
+
+    > input {
+        display: none;
+    }
+    input:hover +.radio-btns{
+        outline: none;
+        border: solid #63C0F9; 
+    }
+    input:checked + .radio-btns{
+        background-color: #FFFFFF;
+        color: #0B0E1F;
+        outline: none;
+        border: solid #63C0F9;
+        box-shadow: 0 0 1px 1px #63C0F9;
+    }
+}
+
+.radio-btns{
+    width: 90px;
+    height: 90px;   
+    border-radius: 10px;
+    border: 1.5px solid silver; /* <-- Override default border */
+    border-color: #E2E2E2; 
+    position: relative;
+    text-align: center;
+   /* box-shadow: 0 1px #c3c3c3;*/
+    cursor: pointer;
+    background-color: #ffffff;
+    margin-right: 15px;
+}
+
+#distance{
+    width: 99%;
+    height: 40px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    border-radius: 7px;
+    border: 1.5px solid silver; /* <-- Override default border */
+    border-color: #E2E2E2; 
+    cursor: pointer;
+}
+
+#distance:hover{
+    outline: none;
+    border: solid #63C0F9;
+}
+
+#distance:focus{
+    outline: none;
+    border: solid #63C0F9;
+    box-shadow: 0 0 1px 1px #63C0F9;
+}
+
+#average, #length{
+    width: 6em;
+    height: 40px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    border-radius: 7px;
+    border: 1.5px solid silver; /* <-- Override default border */
+    border-color: #E2E2E2; 
+    cursor: pointer;
+}
+
+#average:hover{
+    outline: none;
+    border: solid #63C0F9;
+}
+
+#average:focus{
+    outline: none;
+    border: solid #63C0F9;
+    box-shadow: 0 0 1px 1px #63C0F9;
+}
+
+
+#length:hover{
+    outline: none;
+    border: solid #63C0F9;
+}
+
+#length:focus{
+    outline: none;
+    border: solid #63C0F9;
+    box-shadow: 0 0 1px 1px #63C0F9;
+}
+
+span{
+    font-size: large;
+    color: #0B0E1F;
+}
+
+#form-submit{
+    display: flex;
+    justify-content: end;
+}
+#close-popup{
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 24px;
+    font-family: 'helvetica';
+    color: white;
+    border-radius: 5px;
+    background-color: #63C0F9;
+    border: 1px solid #63C0F9; 
+    cursor: pointer;
+}
+
+
+

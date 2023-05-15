@@ -5,12 +5,80 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="scss/main.scss" rel="stylesheet"/>
 </head>
 
 <body>
-  <header>
-    <h1>Task Tracker</h1>
-  </header>
+  <nav>
+    <h1 id="logo">SwimFit</h1>
+  </nav>
+  <section id="header">
+    <h1>Hi Amanda!</h1>
+    <h2>It's good to see you again.</h2>
+    <button id="open-popup" type="button">Add a new session</button>
+
+<section id="popup-container">
+  <section id="popup">
+    <h1>Add new session</h1>
+    <form id="form">
+      <label class="form-label">Purpose:</label><br>
+       <select id="purpose">
+          <option disabled selected>-Select-</option>
+          <option value="endurance">Endurance</option>
+          <option value="training">Training</option>
+          <option value="recovery">Recovery</option>
+          <option value="recreation">Recreation</option>
+       </select>
+       <br>
+       <label id="stroke">Stroke:</label>
+       <fieldset>
+       <label class="labelexpanded">
+       <input type="radio" name="radio" id="freestyle">
+       <div class="radio-btns"><img src="freestyle.png"><p>Freestyle</p></div>
+       </label>  
+
+       <label class="labelexpanded">
+        <input type="radio" name="radio" id="backstroke">
+        <div class="radio-btns"><img src="backstroke.png"><p>Backstroke</p></div>
+        </label>  
+
+       <label class="labelexpanded">
+        <input type="radio" name="radio" id="breastroke">
+        <div class="radio-btns"><img src="breastroke.png"><p>Breastroke</p></div>
+        </label>  
+
+       <label class="labelexpanded">
+        <input type="radio" name="radio" id="butterfly">
+        <div class="radio-btns"><img src="butterfly.png"><p>Butterfly</p></div>
+        </label>  
+       
+        <label class="labelexpanded">
+        <input type="radio" name="radio" id="medley">
+        <div class="radio-btns"><img src="medley.png"><p>Medley</p></div>
+        </label>  
+
+       <br>
+      </fieldset>
+
+       <label class="form-label">Distance</label><br>
+       <input type="text" id="distance" placeholder="e.g. 300m">
+       <br>
+       <label class="form-label">Session length:</label><br>
+       <input type="number" id="length"  min="0" max="24" step="1" placeholder="hr">
+       <span>:</span>
+       <input type="number" id="length"  min="0" max="60" step="5" placeholder="min">
+       <br>
+       <label class="form-label">Average time per lap:</label><br>
+       <input type="number" id="average"  min="0" max="60" step="1" placeholder="min">
+       <span>:</span>
+       <input type="number" id="average"  min="0" max="60" step="5" placeholder="sec">
+    </form>
+    <section id="form-submit">
+      <button id="close-popup" type="submit">Submit</button>
+    </section>
+  </section>
+</section>
+
+  </section>
   <script src="script.js"></script>
 </body>
