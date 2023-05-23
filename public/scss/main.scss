@@ -11,30 +11,72 @@ body{
     background-color:#F5F7FA ;
     nav{
    
-        margin:2em;
-        margin-bottom: 0em;
+        margin:2em 4em 1em;
+        img{
+            width: 13%;
+            height: 13%;
+        }
     }
 }
 
 
-
-#header{
+header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
     background-color: white;
-    padding: 20px;
     border-radius: 25px;
-    margin: 2em;
-    margin-top:0em;
+    margin: 0em 4em;
+    padding: 20px;
+    box-shadow:7px 7px 8px #EFF1F9;
+    img{
+        height: 15em;
+        width: 50em;
+        position: fixed;
+        right: 4.45em;
+    }
+}
+
+#header-content{
+    padding: 30px 60px;
+    h1{
+        font-size: 40px;
+        margin: 0;
+        margin-bottom:10px;
+        padding: 0;
+        font-weight: 540;
+    }
+    h2{
+        margin: 0;
+        margin-bottom: 45px;
+        padding: 0;
+        font-size: 32px;
+        font-weight: 300;
+    }
+    
+}
+
+#open-popup{
+    width: 200px;
+    height: 45px;
+    background-color: #63C0F9;
+    color: #FFFFFF;
+    font-size: 18px;
+    border-radius: 30px;
+    border: 1px solid #63C0F9;
+    cursor: pointer;
 }
 
 //add new session
 
+
 #popup-container {
+    display: none;
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
     background-color: #F5F5F5;
@@ -104,7 +146,7 @@ select{
     -webkit-appearance: none;
     -moz-appearance: none;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="50"><polygon points= "0,0 100,0 50,50" style="fill:%23737492;"/></svg>');
-    background-position: right 10px top 50%;
+    background-position: right 15px top 50%;
     background-repeat: no-repeat;
     background-size: 10px;
 
@@ -127,7 +169,6 @@ select:focus{
 select option{
     background: #ffffff;
 }
-
 
   
 fieldset{
@@ -176,6 +217,10 @@ img{
     cursor: pointer;
     background-color: #ffffff;
     margin-right: 15px;
+}
+
+.radio-btns:hover{
+    color: #0B0E1F;
 }
 
 #distance{
@@ -247,7 +292,7 @@ span{
     width: 100px;
     height: 40px;
     margin-top: 10px;
-    font-size: 24px;
+    font-size: 18px;
     font-family: 'helvetica';
     color: white;
     border-radius: 5px;
@@ -256,5 +301,73 @@ span{
     cursor: pointer;
 }
 
+//submit display
+#submit-container{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F5F5;
+}
 
+#submit-popup{
+    background-color: #F5F5F5;
+    width: 90%;
+    height: 90%;
 
+    h1{
+        font-size: 36px;
+        text-align: center;
+    }
+}
+
+#submit-image{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    img{
+        width: 20%;
+        height: 20%;
+        top: 50%;
+        left: 50%;        
+    }
+}
+
+#xButton{
+    position: absolute;
+    right: 0;
+    margin-right:5em ;
+    border: 1px solid #F5F5F5;
+    background-color: #F5F5F5;
+    color: #0B0E1F;
+    cursor: pointer;
+    img{
+        width: 40px;
+        height: 40px;
+    }
+    
+}
+
+//previous sessions
+
+main{
+    margin: 3em 4em;
+    section{
+        h1{
+            font-size: 34px;
+            font-weight: 300;
+            margin:10px 0px;
+        }
+        hr{
+            width: 500px;
+            margin: 0px;
+            border: 1px solid #0B0E1F;
+            background-color: #0B0E1F;
+            border-radius: 10px;
+        }
+    }
+}
