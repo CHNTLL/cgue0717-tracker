@@ -26,7 +26,7 @@
 <section id="popup-container">
   <section id="popup">
     <h1>Add new session</h1>
-    <form id="form">
+    <form id="taskForm">
       <label class="form-label">Purpose:</label><br>
        <select id="purpose">
           <option disabled selected>-Select-</option>
@@ -39,27 +39,27 @@
        <label id="stroke">Stroke:</label>
        <fieldset>
        <label class="labelexpanded">
-       <input type="radio" name="radio" id="freestyle">
+       <input type="radio" name="radio" class="strokeType">
        <div class="radio-btns"><img src="freestyle.png" alt="graphic of freestyle"><p>Freestyle</p></div>
        </label>  
 
        <label class="labelexpanded">
-        <input type="radio" name="radio" id="backstroke">
+        <input type="radio" name="radio" class="strokeType">
         <div class="radio-btns"><img src="backstroke.png" alt="graphic of backstroke"><p>Backstroke</p></div>
         </label>  
 
        <label class="labelexpanded">
-        <input type="radio" name="radio" id="breastroke">
+        <input type="radio" name="radio" class="strokeType">
         <div class="radio-btns"><img src="breastroke.png" alt="graphic of breastroke"><p>Breastroke</p></div>
         </label>  
 
        <label class="labelexpanded">
-        <input type="radio" name="radio" id="butterfly">
+        <input type="radio" name="radio" class="strokeType">
         <div class="radio-btns"><img src="butterfly.png" alt="graphic of butterfly stroke"><p>Butterfly</p></div>
         </label>  
        
         <label class="labelexpanded">
-        <input type="radio" name="radio" id="medley">
+        <input type="radio" name="radio" class="strokeType">
         <div class="radio-btns"><img src="medley.png" alt="graphic of dive"><p>Medley</p></div>
         </label>  
 
@@ -70,18 +70,19 @@
        <input type="text" id="distance" placeholder="e.g. 300m">
        <br>
        <label class="form-label">Session length:</label><br>
-       <input type="number" id="length"  min="0" max="24" step="1" placeholder="hr">
+       <input type="number" id="lengthHr"  min="0" max="24" step="1" placeholder="hr">
        <span>:</span>
-       <input type="number" id="length"  min="0" max="60" step="5" placeholder="min">
+       <input type="number" id="lengthMin"  min="0" max="60" step="5" placeholder="min">
        <br>
        <label class="form-label">Average time per lap:</label><br>
-       <input type="number" id="average"  min="0" max="60" step="1" placeholder="min">
+       <input type="number" id="averageMin"  min="0" max="60" step="1" placeholder="min">
        <span>:</span>
-       <input type="number" id="average"  min="0" max="60" step="5" placeholder="sec">
-    </form>
+       <input type="number" id="averageSec"  min="0" max="60" step="5" placeholder="sec">
+    
     <section id="form-submit">
       <button id="close-popup" type="submit">Submit</button>
     </section>
+  </form>
   </section>
 </section>
 
@@ -104,6 +105,9 @@
   <section>
     <h1>Previous Sessions</h1>
     <hr>
+    <ul id="formlist">
+
+    </ul>
   </section>
   
 </main>

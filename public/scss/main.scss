@@ -97,7 +97,7 @@ header {
   
 
 //form css
-#form{
+#taskForm{
     display: block;
     justify-content: center;
 }
@@ -245,7 +245,7 @@ img{
     box-shadow: 0 0 1px 1px #63C0F9;
 }
 
-#average, #length{
+#averageMin, #averageSec, #lengthHr, #lengthMin{
     width: 6em;
     height: 40px;
     margin-top: 14px;
@@ -256,29 +256,49 @@ img{
     cursor: pointer;
 }
 
-#average:hover{
+#averageMin:hover{
     outline: none;
     border: solid #63C0F9;
 }
 
-#average:focus{
-    outline: none;
-    border: solid #63C0F9;
-    box-shadow: 0 0 1px 1px #63C0F9;
-}
-
-
-#length:hover{
-    outline: none;
-    border: solid #63C0F9;
-}
-
-#length:focus{
+#averageMin:focus{
     outline: none;
     border: solid #63C0F9;
     box-shadow: 0 0 1px 1px #63C0F9;
 }
 
+#averageSec:hover{
+    outline: none;
+    border: solid #63C0F9;
+}
+
+#averageSec:focus{
+    outline: none;
+    border: solid #63C0F9;
+    box-shadow: 0 0 1px 1px #63C0F9;
+}
+
+#lengthHr:hover{
+    outline: none;
+    border: solid #63C0F9;
+}
+
+#lengthHr:focus{
+    outline: none;
+    border: solid #63C0F9;
+    box-shadow: 0 0 1px 1px #63C0F9;
+}
+
+#lengthMin:hover{
+    outline: none;
+    border: solid #63C0F9;
+}
+
+#lengthMin:focus{
+    outline: none;
+    border: solid #63C0F9;
+    box-shadow: 0 0 1px 1px #63C0F9;
+}
 span{
     font-size: large;
     color: #0B0E1F;
