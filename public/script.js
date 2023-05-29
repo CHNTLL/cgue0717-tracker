@@ -33,6 +33,26 @@ closeSubmitBtn.addEventListener('click', () => {
 
 //console.log(session);
 
+const form = document.getElementById('sessionform');
+const sessionlist = document.querySelector('#sessionlist');
+
+form.addEventListener("submit", function(event){
+  event.preventDefault();
+  //handle the event here
+
+  addSession(
+    form.elements.purpose.value,
+    form.elements.stroke.value,
+    form.elements.distance.value,
+    form.elements.lengthHr.value,
+    form.elements.lengthMin.value,
+    form.elements.averageMin.value,
+    form.elements.averageSec.value,
+  )
+
+  
+})
+
 var sessionList = [];
 
 function addSession(purpose, stroke, distance, lengthHr, lengthMin, averageMin, averageSec) {
@@ -49,10 +69,7 @@ function addSession(purpose, stroke, distance, lengthHr, lengthMin, averageMin, 
   }
 
   sessionList.push(session);
+  console.log(sessionList);
 }
-
-addSession("Endurance", "Freestyle", "200m", 1, 30, 1, 45);
-
-console.log(sessionList);
 
 //above works tested on replit

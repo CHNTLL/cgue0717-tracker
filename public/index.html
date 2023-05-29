@@ -26,9 +26,11 @@
 <section id="popup-container">
   <section id="popup">
     <h1>Add new session</h1>
-    <form id="taskForm">
+    <form id="sessionform">
       <label class="form-label">Purpose:</label><br>
-       <select id="purpose">
+
+      <!--Purpose dropdown select-->
+       <select name="purpose" id="purpose">
           <option disabled selected>-Select-</option>
           <option value="endurance">Endurance</option>
           <option value="training">Training</option>
@@ -36,49 +38,57 @@
           <option value="recreation">Recreation</option>
        </select>
        <br>
-       <label id="stroke">Stroke:</label>
+
+       <!--radio stroke-->
+       <label>Stroke:</label>
+
        <fieldset>
        <label class="labelexpanded">
-       <input type="radio" name="radio" class="strokeType">
-       <div class="radio-btns"><img src="freestyle.png" alt="graphic of freestyle"><p>Freestyle</p></div>
+       <input type="radio" name="stroke" class="stroke" value="Freestyle">
+       <section class="radio-btns"><img src="freestyle.png" alt="graphic of freestyle"><p>Freestyle</p></section>
        </label>  
 
        <label class="labelexpanded">
-        <input type="radio" name="radio" class="strokeType">
-        <div class="radio-btns"><img src="backstroke.png" alt="graphic of backstroke"><p>Backstroke</p></div>
+        <input type="radio" name="stroke" class="stroke" value="Backstroke" >
+        <section class="radio-btns"><img src="backstroke.png" alt="graphic of backstroke"><p>Backstroke</p></section>
         </label>  
 
        <label class="labelexpanded">
-        <input type="radio" name="radio" class="strokeType">
-        <div class="radio-btns"><img src="breastroke.png" alt="graphic of breastroke"><p>Breastroke</p></div>
+        <input type="radio" name="stroke" class="stroke" value="Breastroke" >
+        <section class="radio-btns"><img src="breastroke.png" alt="graphic of breastroke"><p>Breastroke</p></section>
         </label>  
 
        <label class="labelexpanded">
-        <input type="radio" name="radio" class="strokeType">
-        <div class="radio-btns"><img src="butterfly.png" alt="graphic of butterfly stroke"><p>Butterfly</p></div>
+        <input type="radio" name="stroke" class="stroke" value="Butterfly" >
+        <section class="radio-btns"><img src="butterfly.png" alt="graphic of butterfly stroke"><p>Butterfly</p></section>
         </label>  
        
         <label class="labelexpanded">
-        <input type="radio" name="radio" class="strokeType">
-        <div class="radio-btns"><img src="medley.png" alt="graphic of dive"><p>Medley</p></div>
+        <input type="radio" name="stroke" class="stroke" value="Medley" >
+        <section class="radio-btns"><img src="medley.png" alt="graphic of dive"><p>Medley</p></section>
         </label>  
-
        <br>
       </fieldset>
 
+      <!--Distance dropdown select-->
        <label class="form-label">Distance</label><br>
-       <input type="text" id="distance" placeholder="e.g. 300m">
+       <input type="text" name="distance" id="distance" placeholder="e.g. 300m">
        <br>
+
+       <!--Session length number-->
        <label class="form-label">Session length:</label><br>
-       <input type="number" id="lengthHr"  min="0" max="24" step="1" placeholder="hr">
+       <input type="number" name="lengthHr" id="lengthHr"  min="0" max="24" step="1" placeholder="hr">
        <span>:</span>
-       <input type="number" id="lengthMin"  min="0" max="60" step="5" placeholder="min">
+       <input type="number" name="lengthMin" id="lengthMin"  min="0" max="60" step="1" placeholder="min" novalidate>
        <br>
+
+       <!--Average lap number-->
        <label class="form-label">Average time per lap:</label><br>
-       <input type="number" id="averageMin"  min="0" max="60" step="1" placeholder="min">
+       <input type="number" name="averageMin" id="averageMin"  min="0" max="60" step="1" placeholder="min">
        <span>:</span>
-       <input type="number" id="averageSec"  min="0" max="60" step="5" placeholder="sec">
+       <input type="number" name="averageMin" id="averageSec"  min="0" max="60" step="1" placeholder="sec">
     
+       <!--submit-->
     <section id="form-submit">
       <button id="close-popup" type="submit">Submit</button>
     </section>
@@ -105,7 +115,7 @@
   <section>
     <h1>Previous Sessions</h1>
     <hr>
-    <ul id="formlist">
+    <ul id="sessionlist">
 
     </ul>
   </section>
