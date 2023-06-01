@@ -39,7 +39,6 @@ const sessionlist = document.querySelector('#sessionlist');
 form.addEventListener("submit", function(event){
   event.preventDefault();
   //handle the event here
-
   addSession(
     form.elements.purpose.value,
     form.elements.stroke.value,
@@ -49,9 +48,38 @@ form.addEventListener("submit", function(event){
     form.elements.averageMin.value,
     form.elements.averageSec.value,
   )
-
-  
 })
+
+function displaySession(session) {
+  let item = document.createElement("ul");
+  item.setAttribute("data-id", session.id);
+  item.innerHTML =`<p><strong>${session.purpose}</strong><br>${'Date added: ' + session.date}</p>`;
+  item.style.fontStyle="questrial";
+  sessionlist.appendChild(item);
+  form.reset();
+
+  // Setup delete button DOM elements
+let delButton = document.createElement("button");
+let delButtonText = document.createTextNode("🗑️");
+delButton.appendChild(delButtonText);
+item.appendChild(delButton); // Adds a delete button to every task
+
+// Listen for when the delete button is clicked
+delButton.addEventListener("click", function(event) {
+  
+  taskList.forEach(function(sessionArrayElement, sessionArrayIndex) {
+    if (sessionArrayElement.id == item.getAttribute('data-id')) {
+      sessionList.splice(sessionArrayIndex, 1)
+    }
+  })
+  
+  item.remove(); // Remove the task item from the page when button clicked
+  // Because we used 'let' to define the item, this will delete the right element
+})
+
+}
+
+
 
 var sessionList = [];
 
@@ -65,11 +93,12 @@ function addSession(purpose, stroke, distance, lengthHr, lengthMin, averageMin, 
     averageMin,
     averageSec,
     id: Date.now(),
-    date: new Date().toISOString(),
+    date: new Date().toLocaleDateString(),
   }
 
   sessionList.push(session);
   console.log(sessionList);
+  displaySession(session);
 }
 
-//above works tested on replit
+
