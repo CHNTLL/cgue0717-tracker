@@ -393,49 +393,28 @@ main{
 }
 
 //session lists
-
-#sessionlist{
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    margin-block-start: 0;
+ul{
+    margin: 0;
     padding: 0;
-
 }
 
-#sessionlist li {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    border: 1px solid gray;
-    padding: 1em;
-    margin-bottom: 1em;
-    background-color: red;
-  }
+#sessionlist{
+    font-family: Helvetica, sans-serif;
+    width: auto;
+    height: auto;
+    border-radius: 25px;
+    margin-bottom: 100px;
 
-#sessionlist li p {
-    flex-grow: 1;
-    margin-left: 10px;
-    max-width: 200px;
-    font-family: helvetica, arial, sans-serif;
-  }
-  #sessionlist li span {
-    text-align: right;
-    flex-grow: 1;
-    margin-right: 10px;
-    max-width: 200px;
-  }
-  
-  #sessionlist li input[type="checkbox"] {
-    margin-top: 10px;
-    width: 20px;
-    height: 20px;
-  }
-  
-  #sessionlist li button {
-    font-size: 20px;
-    padding: 4px;
-  }
+
+    #sessionheader{
+        background-color: #FFFFFF;
+    }
+    #sessiontitle{
+        color: red;
+        border: #0B0E1F 1px solid;
+        border-radius: 100px;
+    }
+}
+
+
   
