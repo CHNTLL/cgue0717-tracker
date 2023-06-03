@@ -1,7 +1,5 @@
 import images from './images/*.png';
-console.log(images)
-
-
+console.log(images);
 
 const openPopupBtn = document.getElementById('open-popup');
 const closePopupBtn = document.getElementById('close-popup');
@@ -75,43 +73,79 @@ form.addEventListener("submit", function(event){
   )
 })
 
+
 function displaySession(session) {
+  
+  let sessionImage = null;
+switch (session.stroke) {
+    case 'Freestyle':
+      sessionImage = images['freestyle']
+        break;
+    case 'Backstroke':
+      sessionImage = images['backstroke']
+        break;
+    case 'Breastroke':
+      sessionImage = images['breastroke']
+        break;
+    case 'Butterfly':
+      sessionImage = images['butterfly']
+        break;
+    case 'Medley':
+      sessionImage = images['medley']
+        break;
+    default:
+        break;
+}
+
   let item = document.createElement("ul");
   item.setAttribute("data-id", session.id);
   item.innerHTML =
   `
   <details>
-  <summary>${session.purpose} <br> ${'Date added: ' + session.date} </summary>
+  <summary> 
+  <section id="summarycontainer">
+  <figure id="figure"> 
   <section>
+  <img src='${sessionImage}'/> <p> ${session.stroke}</p> 
+  </section>
+  </figure>
+  <section id="summarycontent">
+  <section id="summarytext">
+  <h2>${session.purpose} </h2>
+  <p>${'Date added: ' + session.date}</p>
+  </section>
+  </section>
+  </summary>
+  <article id="usercontent">
+  <section id="userdistance">
   <h3>Distance</h3>
   <hr>
   <p>${session.distance + ' metres'}</p>
   </section>
-  <section>
+  <section id="userduration">
   <h3>Duration</h3>
   <hr>
   <p>${session.lengthHr + ' hour '} ${session.lengthMin + ' minute session'}</p>
   </section>
-  <section>
+  <section id="useraverage">
   <h3>Average time</h3>
   <hr>
-  <p>${session.averageMin + ' minute'} ${session.averageSec + ' seconds per lap'}</p>
+  <p>${session.averageMin + ' minute '} ${session.averageSec + ' seconds per lap'}</p>
   </section>
-
-
+  </article>
   </details>`
   ;
-  item.style.fontStyle="questrial";
   sessionlist.appendChild(item);
 
   form.reset();
+
+
 
   // Setup delete button DOM elements
 let delButton = document.createElement("button");
 let delButtonText = document.createTextNode("🗑️");
 delButton.appendChild(delButtonText);
-item.appendChild(delButton); // Adds a delete button to every task
-
+item.appendChild(delButton);
 // Listen for when the delete button is clicked
 delButton.addEventListener("click", function(event) {
   
@@ -123,9 +157,8 @@ delButton.addEventListener("click", function(event) {
   
   item.remove(); // Remove the task item from the page when button clicked
   // Because we used 'let' to define the item, this will delete the right element
+
 })
-
-
 
 
 }
