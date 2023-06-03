@@ -115,6 +115,7 @@ switch (session.stroke) {
   <p>${'Date added: ' + session.date}</p>
   </section>
   </section>
+  <div id="appendhere"></div>
   </summary>
   <article id="usercontent">
   <section id="userdistance">
@@ -145,7 +146,7 @@ switch (session.stroke) {
 let delButton = document.createElement("button");
 let delButtonText = document.createTextNode("🗑️");
 delButton.appendChild(delButtonText);
-item.appendChild(delButton);
+item.appendChild(delButton)
 // Listen for when the delete button is clicked
 delButton.addEventListener("click", function(event) {
   

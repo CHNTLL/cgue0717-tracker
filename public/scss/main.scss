@@ -13,8 +13,8 @@ body{
    
         margin:2em 4em 1em;
         img{
-            width: 13%;
-            height: 13%;
+            width: 10em;
+            height: auto;
         }
     }
 }
@@ -30,12 +30,9 @@ header {
     padding: 20px;
     box-shadow:7px 7px 8px #EFF1F9;
     background-image: url(/public/images/waves.png);
-    img{
-        height: 15em;
-        width: 50em;
-        position: fixed;
-        right: 4.45em;
-    }
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: 150%;
 }
 
 #header-content{
@@ -384,11 +381,11 @@ main{
             margin:10px 0px;
         }
         #previoustitle{
-            width: 500px;
+            width: 100%;
             margin-bottom: 3em;
             margin-left: 0;
-            border: 1px solid #0B0E1F;
-            background-color: #0B0E1F;
+            border: 1px solid #737492;
+            background-color: #737492;
             border-radius: 10px;
         }
     }
@@ -410,10 +407,10 @@ details {
     border-radius: 10px;
 
     hr{
-        width: 15em;
+        width: 70%;
         margin: 0px;
-        border: 1px solid #0B0E1F;
-        background-color: #0B0E1F;
+        border: 1px solid #737492;
+        background-color: #737492;
         border-radius: 10px;
     }
 
@@ -498,3 +495,13 @@ details {
         margin:0px;
     }
   }
+
+
+  @media screen and (max-width: 600px){
+    #usercontent {  
+    display: inline;
+    }
+    header{
+      background-image: none;
+    }
+}
